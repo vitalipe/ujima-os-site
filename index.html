@@ -13,7 +13,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/logo-icon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/PublicSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=16">
+<link rel="stylesheet" href="assets/site.css?v=19">
 </head>
 <body>
 
@@ -28,6 +28,7 @@
       <a href="#desktop">Desktop</a>
       <a href="#manage">Manage</a>
       <a href="#updates">Updates</a>
+      <a href="#how">Under the hood</a>
       <a href="#faq">FAQ</a>
       <a href="#team">Team</a>
       <a class="gh" href="https://github.com/vitalipe/ujima-os">
@@ -392,6 +393,8 @@
         <div><b>A clean system on every start</b><p>The system partition is mounted read-only with a throwaway layer on top, so what changes during a session is gone after a restart.</p></div>
         <div><b>Signed, not centralised</b><p>Machines take commands only when they are signed with the room's key. The key lives on the machines and on the admin stick.</p></div>
         <div><b>Found without setup</b><p>Each machine announces itself on the local network and the Console sweeps the subnet as well, so a room fills in without anyone typing an address.</p></div>
+        <div><b>Settings in layers</b><p>A setting can be held for the whole room, for one machine, for the current session, or pinned for an activity such as a presentation. The most specific layer wins, and anything pinned wears a padlock in the bar.</p></div>
+        <div><b>A shell that speaks HTTP</b><p>The bar, the home screen and Files show what the runtime streams over a local HTTP API, and send every click back the same way. The Console and other machines use the signed side of that API.</p></div>
       </div>
       <div class="disk" role="img" aria-label="Disk layout: a control partition, slot A and slot B each with boot, system and settings partitions, then logs and storage shared by both slots.">
         <svg viewBox="0 0 1100 190" aria-hidden="true">
@@ -492,7 +495,7 @@
         <div class="tphotos">
           <figure><div class="screen zoom photo"><img src="assets/img/field/team-2024.webp" width="1008" height="756" loading="lazy" decoding="async" alt="Four members of the team sitting together outdoors in 2024."></div><figcaption><b>The team in 2024.</b> From the left: Stewart, Godson, Kobi and Vitali.</figcaption></figure>
           <figure><div class="screen zoom photo"><img src="assets/img/field/team-2026.webp" width="576" height="432" loading="lazy" decoding="async" alt="Four members of the team standing in front of a waterfall in Arusha National Park in 2026."></div><figcaption><b>And in 2026,</b> in Arusha National Park. From the left: Stewart, Dani, Vitali and Godson.</figcaption></figure>
-          <figure class="wide"><div class="screen zoom photo"><img src="assets/img/field/nkoarisambu-demo-2026.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Team members showing UjimaOS to teachers in the Nkoarisambu computer lab."></div><figcaption><b>Showing UjimaOS to the teachers at Nkoarisambu,</b> who asked for it on every machine.</figcaption></figure>
+          <figure class="wide"><div class="screen zoom photo"><img src="assets/img/field/nkoarisambu-demo-2026.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Team members showing UjimaOS to teachers in the Nkoarisambu computer lab."></div><figcaption><b>Showing UjimaOS to the teachers at Nkoarisambu,</b> first UjimaOS console demo :)</figcaption></figure>
         </div>
         <div class="tcopy">
           <ul class="people">
@@ -508,7 +511,7 @@
       <div class="hackbox">
         <img class="bigmark" src="assets/img/logo-mark.svg" alt="" width="78" height="85">
         <div class="hcopy">
-          <h3>Come hack with us</h3>
+          <h3>Come build with us</h3>
           <p>UjimaOS is a young system. It runs two computer labs today, but it is changing quickly and will not be called stable until v1. There is plenty left to build, and plenty to learn from the rooms it runs in.</p>
           <p>If you write code, design, look after a computer room or just like the idea, come and build it with us.</p>
           <div class="ctas">
