@@ -245,42 +245,6 @@ dialog.lightbox img { max-width: min(96vw, 1920px); max-height: 94vh; width: aut
   .btn, .top { transition: none; }
 }
 
-/* manage: the stick, animated (one 14 s loop, three beats) */
-.howto { margin-top: 40px; padding: clamp(16px, 3vw, 34px) clamp(12px, 3vw, 34px) clamp(18px, 2.4vw, 28px); border-radius: 22px; background: var(--panel); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05); }
-.scene { display: block; width: 100%; max-width: 980px; height: auto; margin: 0 auto; }
-.scene .wave { fill: none; stroke: var(--frost); stroke-width: 2.6; stroke-dasharray: 7 9; stroke-linecap: round; }
-.scene .d-tiles.mid { opacity: 0; }
-.scene .d-chk { transform-box: fill-box; transform-origin: center; }
-.howcaps { position: relative; height: 2.9em; margin-top: 6px; font: 400 clamp(19px, 2.5vw, 30px)/1.25 "Excalifont", "Public Sans", sans-serif; color: #f4f7fa; text-align: center; }
-.howcaps p { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 0.55em; padding: 0 8px; }
-.howcaps b { flex: none; display: inline-grid; place-items: center; width: 1.45em; height: 1.45em; border-radius: 50%; border: 2px solid var(--frost); color: var(--frost); font-weight: 400; font-size: 0.8em; }
-.howcaps .c1, .howcaps .c3 { opacity: 0; }
-@media (prefers-reduced-motion: reduce) {
-  .howcaps { height: auto; display: grid; gap: 6px; }
-  .howcaps p, .howcaps .c1, .howcaps .c3 { position: static; opacity: 1; }
-}
-@media (prefers-reduced-motion: no-preference) {
-  .scene .d-stick { animation: dStick 14s ease-in-out infinite; }
-  .scene .d-on, .scene .d-console { animation: dOn 14s ease infinite; }
-  .scene .d-tiles.mid { animation: dMid 14s ease infinite; }
-  .scene .d-tiles:not(.mid) { animation: dDim 14s ease infinite; }
-  .scene .d-waves { animation: dWaves 14s ease infinite; }
-  .scene .wave { animation: dMarch 0.9s linear infinite; }
-  .scene .d-chk { animation: dChk 14s ease infinite; animation-delay: calc(var(--i) * 0.22s); }
-  .howcaps .c1 { animation: dC1 14s ease infinite; }
-  .howcaps .c2 { animation: dC2 14s ease infinite; }
-  .howcaps .c3 { animation: dC3 14s ease infinite; }
-}
-@keyframes dStick { 0%, 17% { transform: translateY(64px); } 27%, 64% { transform: translateY(0); } 74%, 100% { transform: translateY(64px); } }
-@keyframes dOn { 0%, 28% { opacity: 0; } 32%, 66% { opacity: 1; } 71%, 100% { opacity: 0; } }
-@keyframes dMid { 0%, 28% { opacity: 1; } 32%, 66% { opacity: 0; } 71%, 100% { opacity: 1; } }
-@keyframes dDim { 0%, 34% { opacity: 1; } 38%, 66% { opacity: 0.22; } 71%, 100% { opacity: 1; } }
-@keyframes dWaves { 0%, 32% { opacity: 0; } 36%, 64% { opacity: 1; } 69%, 100% { opacity: 0; } }
-@keyframes dMarch { to { stroke-dashoffset: -32; } }
-@keyframes dChk { 0%, 39% { opacity: 0; transform: scale(0.5); } 43%, 64% { opacity: 1; transform: scale(1); } 69%, 100% { opacity: 0; transform: scale(1); } }
-@keyframes dC1 { 0%, 21% { opacity: 1; } 25%, 96% { opacity: 0; } 100% { opacity: 1; } }
-@keyframes dC2 { 0%, 23% { opacity: 0; } 27%, 64% { opacity: 1; } 68%, 100% { opacity: 0; } }
-@keyframes dC3 { 0%, 67% { opacity: 0; } 71%, 94% { opacity: 1; } 98%, 100% { opacity: 0; } }
 /* notes drawn over the clips by the page, timed to the video */
 .screen .notes { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .note { opacity: 0; transition: opacity 0.35s ease; }

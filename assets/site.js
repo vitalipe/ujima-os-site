@@ -11,6 +11,17 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+
+  // the admin stick beside the Manage clip: out, slides in at its plug time, back out at unplug
+  const ease = x => (x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x));
+  function placeStick(g, t) {
+    const d = g.dataset, show = +d.show, plug = +d.plug, unplug = +d.unplug, hide = +d.hide, OUT = -170;
+    const on = t >= show && t <= hide;
+    const x = t < unplug ? OUT * (1 - ease((t - plug) / 0.6)) : OUT * ease((t - unplug) / 0.6);
+    g.setAttribute('transform', `translate(${on ? x.toFixed(1) : OUT} 0)`);
+    g.style.opacity = on ? Math.min(1, (t - show) / 0.3, (hide - t) / 0.4).toFixed(2) : 0;
+  }
+
   for (const v of document.querySelectorAll('video[data-src]')) {
     const frame = v.closest('.screen');
     const btn = document.createElement('button');
@@ -31,7 +42,12 @@
 
     const notes = [...frame.querySelectorAll('.note')].map(g => [g, +g.dataset.t0, +g.dataset.t1]);
     let raf = 0;
-    const paint = () => { const t = v.currentTime; for (const [g, a, b] of notes) g.classList.toggle('on', t >= a && t < b); };
+    const sticks = [...frame.querySelectorAll('.stick')];
+    const paint = () => {
+      const t = v.currentTime;
+      for (const [g, a, b] of notes) g.classList.toggle('on', t >= a && t < b);
+      for (const g of sticks) placeStick(g, t);
+    };
     const loop = () => { paint(); raf = v.paused ? 0 : requestAnimationFrame(loop); };
     if (notes.length) {
       v.addEventListener('play', () => { if (!raf) raf = requestAnimationFrame(loop); });
