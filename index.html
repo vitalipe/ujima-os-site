@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UjimaOS — shared computers that keep working</title>
+<meta name="description" content="UjimaOS is a local-first, peer-managed operating system for rooms of shared Raspberry Pi computers: no cloud, no server, updates with a way back.">
+<meta name="theme-color" content="#14171b">
+<meta property="og:title" content="UjimaOS — shared computers that keep working">
+<meta property="og:description" content="A local-first, peer-managed operating system for rooms of shared Raspberry Pi computers.">
+<meta property="og:url" content="https://vitalipe.github.io/ujima-os-site/">
+<meta property="og:image" content="https://vitalipe.github.io/ujima-os-site/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/logo-icon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/PublicSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="UjimaOS home">
+      <img src="assets/img/logo-mark.svg" alt="" width="26" height="28">
+      UjimaOS
+    </a>
+    <nav aria-label="Sections">
+      <a href="#desktop">Desktop</a>
+      <a href="#console">Console</a>
+      <a href="#updates">Updates</a>
+      <a href="#faq">FAQ</a>
+      <a class="gh" href="https://github.com/vitalipe/ujima-os">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        GitHub
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- hero -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <img class="heromark" src="assets/img/logo-mark.svg" alt="" width="66" height="72">
+        <h1>Shared computers<br>that <em>keep working</em>.</h1>
+        <p class="lede">UjimaOS is a local-first operating system for rooms of shared Raspberry Pi computers. The machines find each other on the local network, answer to one admin USB stick, and update side by side, with no cloud, no server and no internet required.</p>
+        <div class="ctas">
+          <a class="btn primary" href="https://github.com/vitalipe/ujima-os">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            Get the code
+          </a>
+          <a class="btn quiet" href="#desktop">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+            See it in action
+          </a>
+        </div>
+        <div class="pills">
+          <span class="pill" style="--c: var(--explore)"><i></i>Open source, MPL-2.0</span>
+          <span class="pill" style="--c: var(--learn)"><i></i>Raspberry Pi 5 &amp; Pi 500</span>
+          <span class="pill" style="--c: var(--code)"><i></i>Release v0.5.2</span>
+        </div>
+      </div>
+
+      <div class="stack">
+        <figure class="screen back zoom" data-full="assets/img/shell-launcher.webp">
+          <img src="assets/img/shell-launcher.webp" srcset="assets/img/shell-launcher-1200.webp 1200w, assets/img/shell-launcher.webp 1920w" sizes="(max-width: 760px) 100vw, 950px" width="1920" height="1080" alt="The UjimaOS home screen: apps grouped into Learn, Explore, Office, Create and Code, with the dock and the clock below." fetchpriority="high">
+        </figure>
+        <figure class="screen front zoom">
+          <img src="assets/img/console-circle.webp" width="1920" height="1080" alt="The Circle panel of the Console: eight machines in a ring around this one.">
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- what it is -->
+  <section id="why">
+    <div class="wrap">
+      <div class="head center">
+        <span class="eyebrow" style="--c: var(--frost-rgb)">Why UjimaOS</span>
+        <h2>Built for rooms where many people share computers and few people look after them</h2>
+      </div>
+      <div class="props">
+        <article class="prop" style="--c: var(--explore)">
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"/><path d="M8.5 16.43a5 5 0 0 1 7 0"/><path d="M5 12.86a10 10 0 0 1 5.17-2.69"/><path d="M19 12.86a10 10 0 0 0-2-1.52"/><path d="M2 8.82a15 15 0 0 1 4.18-2.64"/><path d="M22 8.82a15 15 0 0 0-11.29-3.76"/><path d="m2 2 20 20"/></svg></div>
+          <h3>Local-first</h3>
+          <p>Everything runs on the machines in the room. Apps, files, administration and updates all work offline; the internet is welcome, never required.</p>
+        </article>
+        <article class="prop" style="--c: var(--learn)">
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></div>
+          <h3>Easy to install</h3>
+          <p>One command writes a card that is ready to boot, and an installer is on the way. Each machine names itself and finds the others on the network; there is nothing to set up machine by machine.</p>
+        </article>
+        <article class="prop" style="--c: var(--create)">
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <h3>Easy to maintain</h3>
+          <p>The system is read-only and comes back clean after every restart. Files live in three plain places, and one admin stick opens the Console on any machine.</p>
+        </article>
+        <article class="prop" style="--c: var(--frost-rgb)">
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1.6"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4"/><path d="M7.8 16.2a6 6 0 0 1 0-8.4"/><path d="M19.1 4.9a10 10 0 0 1 0 14.2"/><path d="M4.9 19.1a10 10 0 0 1 0-14.2"/></svg></div>
+          <h3>Peer-to-peer management</h3>
+          <p>There is no central server. The Console runs on whichever machine holds the admin stick and talks to the others directly, with every command signed by the room's key.</p>
+        </article>
+        <article class="prop" style="--c: var(--code)">
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Robust A/B updates</h3>
+          <p>Every disk holds two complete systems. A new version is written beside the running one, tried once, and kept only when it works.</p>
+        </article>
+        <article class="prop" style="--c: var(--office)">
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg></div>
+          <h3>Raspberry Pi, x86 next</h3>
+          <p>Made for the Raspberry Pi 5 and Pi 500: small, quiet, cheap to replace. A port to x86 computers is on the way.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- where it runs -->
+  <section id="rooms">
+    <div class="wrap">
+      <div class="head center">
+        <span class="eyebrow" style="--c: var(--learn)">Where it runs</span>
+        <h2>Public labs, school labs, libraries, community rooms</h2>
+        <p>Places where power and internet come and go, where anyone may sit down at any machine, and where nobody should need a technician to get the room working again.</p>
+      </div>
+      <div class="photos">
+        <div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg><b>Photo to come</b>A room running UjimaOS</div></div>
+        <div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg><b>Photo to come</b>A workstation up close</div></div>
+        <div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg><b>Photo to come</b>The admin stick in use</div></div>
+      </div>
+      <p class="factline">In use since September 2026 in two computer labs near Arusha, Tanzania: a public lab and a school lab.</p>
+    </div>
+  </section>
+
+  <!-- the desktop -->
+  <section id="desktop">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow" style="--c: var(--explore)">The desktop</span>
+        <h2>A desktop anyone can sit down at</h2>
+        <p>One home screen with every app grouped by what it is for. An app fills the screen with a single close button, and the bar keeps sound, the keyboard layout and the time within reach.</p>
+      </div>
+      <figure class="lead-media">
+        <div class="screen">
+          <video muted loop playsinline preload="none" poster="assets/video/shell-poster.webp" data-src="assets/video/shell.mp4" width="1920" height="1080" aria-label="Opening Excalidraw from the home screen, checking the volume slider and the keyboard layouts in the bar, and going home again."></video>
+        </div>
+        <figcaption><b>Open an app,</b> check the sound and the keyboard layout, go back home.</figcaption>
+      </figure>
+
+      <div class="feature">
+        <div class="copy">
+          <h3>Files go where you would expect</h3>
+          <p>Every machine has three places for files, each one named for what happens to it. A USB stick shows up the moment it is plugged in, ready to take home.</p>
+          <ul class="ticks" style="--c: var(--explore)">
+            <li><b>Temporary</b> is scratch space, erased at shutdown.</li>
+            <li><b>This Computer</b> stays, shared by everyone who uses the machine.</li>
+            <li><b>USB sticks</b> mount the moment they are plugged in, and are checked and repaired first when needed.</li>
+          </ul>
+        </div>
+        <figure>
+          <div class="screen">
+            <video muted loop playsinline preload="none" poster="assets/video/files-poster.webp" data-src="assets/video/files.mp4" width="1920" height="1080" aria-label="Files on the Places screen: a USB stick is plugged in, appears as a card, and a picture on it opens in the Web app."></video>
+          </div>
+          <figcaption><b>Plug in a stick</b> and open a picture from it.</figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip">
+        <div class="copy">
+          <h3>Every Open and Save starts in the same places</h3>
+          <p>Chromium, Electron, Qt and Godot apps open UjimaOS's own file picker, and the GTK apps open their dialogs on the same Places screen, so finding a file works the same way in every app. An app with a folder of its own gets it as a place.</p>
+        </div>
+        <figure>
+          <div class="screen zoom"><img src="assets/img/shell-picker.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="The UjimaOS file picker opened from Godot, with the app's own folder, Temporary and This Computer as places."></div>
+          <figcaption><b>Godot's Open dialog</b> lands in the UjimaOS picker, with its project as a place.</figcaption>
+        </figure>
+      </div>
+
+      <div class="feature">
+        <div class="copy">
+          <h3>Locks and focus, from the admin's seat</h3>
+          <p>From the Console, an admin can lock every screen for a break, or hold the room on one app. In focus mode the bars disappear and switching apps is off until the machine is released.</p>
+        </div>
+        <div class="pair">
+          <figure>
+            <div class="screen zoom" data-full="assets/img/shell-lock.webp"><img src="assets/img/shell-lock-1200.webp" width="1200" height="675" loading="lazy" decoding="async" alt="A locked UjimaOS screen showing a padlock, the time and the date."></div>
+            <figcaption><b>Locked</b> over the wallpaper.</figcaption>
+          </figure>
+          <figure>
+            <div class="screen zoom"><img src="assets/img/shell-focus.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="Excalidraw filling the whole screen with no bars: focus mode."></div>
+            <figcaption><b>Focus:</b> one app, no bars.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="head center" style="margin-top: clamp(56px, 8vw, 96px)">
+        <h3 style="font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.5px">The apps are already there</h3>
+        <p>Office, drawing, programming, maps and the night sky, installed on every machine. Apart from the Web app, none of them needs the internet. Adding an app is adding one folder.</p>
+      </div>
+      <div class="apps">
+        <figure><div class="screen zoom" data-full="assets/img/app-stellarium.webp"><img src="assets/img/app-stellarium-1200.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Stellarium showing a starry sky above a field."></div><figcaption><b>Stellarium</b> · the night sky</figcaption></figure>
+        <figure><div class="screen zoom" data-full="assets/img/app-marble.webp"><img src="assets/img/app-marble-1200.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Marble showing a satellite view of Africa."></div><figcaption><b>Marble</b> · the globe</figcaption></figure>
+        <figure><div class="screen zoom"><img src="assets/img/app-turbowarp.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="TurboWarp with a running Scratch script that moves and turns a sprite."></div><figcaption><b>TurboWarp</b> · Scratch projects</figcaption></figure>
+        <figure><div class="screen zoom"><img src="assets/img/app-godot.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="The Godot editor showing a colourful 2D platformer level."></div><figcaption><b>Godot</b> · making games</figcaption></figure>
+      </div>
+      <div class="chips" aria-label="Apps included">
+        <span class="chip" style="--c: var(--learn)"><i></i>TuxTyping</span>
+        <span class="chip" style="--c: var(--explore)"><i></i>Web (Chromium)</span>
+        <span class="chip" style="--c: var(--explore)"><i></i>Marble</span>
+        <span class="chip" style="--c: var(--explore)"><i></i>Stellarium</span>
+        <span class="chip" style="--c: var(--explore)"><i></i>XaoS</span>
+        <span class="chip" style="--c: var(--office)"><i></i>ONLYOFFICE</span>
+        <span class="chip" style="--c: var(--office)"><i></i>LibreOffice Writer, Calc, Impress</span>
+        <span class="chip" style="--c: var(--create)"><i></i>GIMP</span>
+        <span class="chip" style="--c: var(--create)"><i></i>Inkscape</span>
+        <span class="chip" style="--c: var(--create)"><i></i>Tux Paint</span>
+        <span class="chip" style="--c: var(--create)"><i></i>Excalidraw</span>
+        <span class="chip" style="--c: var(--code)"><i></i>Godot</span>
+        <span class="chip" style="--c: var(--code)"><i></i>TurboWarp</span>
+        <span class="chip" style="--c: var(--code)"><i></i>Thonny</span>
+        <span class="chip" style="--c: var(--code)"><i></i>Geany</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- the console -->
+  <section id="console">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow" style="--c: var(--frost-rgb)">The Console</span>
+        <h2>Run the whole room from one USB stick</h2>
+        <p>Plug the admin stick into any machine and the Console opens. Pull it out and the Console closes. It reaches every machine that shares the room's key, directly over the local network.</p>
+      </div>
+      <div class="panes">
+        <div class="pane"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1.6"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4"/><path d="M7.8 16.2a6 6 0 0 1 0-8.4"/><path d="M19.1 4.9a10 10 0 0 1 0 14.2"/><path d="M4.9 19.1a10 10 0 0 1 0-14.2"/></svg><div><b>Circle</b><span>Guide every screen: apps, sound, locks, power.</span></div></div>
+        <div class="pane"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34 1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87 1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg><div><b>Setup</b><span>Names, clock, keyboard layouts and checks, per machine or for all.</span></div></div>
+        <div class="pane"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><div><b>Update</b><span>A newer UjimaOS from a stick, or back to the previous one.</span></div></div>
+      </div>
+      <figure class="lead-media">
+        <div class="screen zoom"><img src="assets/img/console-home.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="The Console's home screen with three tiles: Circle, Setup and Update."></div>
+        <figcaption><b>The Console</b> opens on its own when the admin stick goes in.</figcaption>
+      </figure>
+
+      <div class="feature">
+        <div class="copy">
+          <h3>Circle: every screen at a glance</h3>
+          <p>The ring shows every machine in the room, what it is running and whether it is on. Pick a few machines, or all of them, and act on them at once.</p>
+          <ul class="ticks">
+            <li><b>Apps:</b> open or close an app, or hold the room on one in focus mode.</li>
+            <li><b>Session:</b> mute or unmute, lock or unlock.</li>
+            <li><b>Power:</b> restart or power off.</li>
+            <li>Every answer comes back to the ring: done, failed, or no reply.</li>
+          </ul>
+        </div>
+        <figure>
+          <div class="screen">
+            <video muted loop playsinline preload="none" poster="assets/video/circle-poster.webp" data-src="assets/video/circle.mp4" width="1920" height="1080" aria-label="The Circle panel finds eight machines, selects them all, locks their screens and unlocks them again."></video>
+          </div>
+          <figcaption><b>Lock every screen,</b> then unlock them again.</figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip">
+        <div class="copy">
+          <h3>Setup: one machine, or every machine</h3>
+          <p>Give a machine its name, set the clock and time zone, choose keyboard layouts and where sound goes. The clock and the keyboard layouts go to the whole room in one click, so after a power cut every clock is put right at once.</p>
+          <ul class="ticks">
+            <li>Each row lights up as its machine answers.</li>
+            <li>Diagnostics show each machine's version, slot, address, uptime and free space.</li>
+          </ul>
+        </div>
+        <figure>
+          <div class="screen">
+            <video muted loop playsinline preload="none" poster="assets/video/setup-poster.webp" data-src="assets/video/setup.mp4" width="1920" height="1080" aria-label="Setup sends this computer's clock to all machines; each row in the list turns green, then another machine is selected."></video>
+          </div>
+          <figcaption><b>Send the clock to all machines,</b> and watch each one answer.</figcaption>
+        </figure>
+      </div>
+
+      <div class="pair" style="margin-top: 40px">
+        <figure>
+          <div class="screen zoom"><img src="assets/img/console-circle-selected.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="The Circle with eight machines selected and the action bar showing Focus, Release, Close, Mute, Sound on, Lock, Unlock, Restart and Power off."></div>
+          <figcaption><b>Select the room,</b> then pick an action.</figcaption>
+        </figure>
+        <figure>
+          <div class="screen zoom"><img src="assets/img/console-setup-diagnostics.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="Setup's diagnostics tab for this computer: serial, image version and slot, address, uptime, free storage and machine time."></div>
+          <figcaption><b>Diagnostics</b> for one machine.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- updates -->
+  <section id="updates">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow" style="--c: var(--learn)">Updates</span>
+        <h2>Updates with a way back</h2>
+        <p>Every disk holds two complete systems, slot A and slot B. An update from a USB stick is written into the slot that is not in use while the computer keeps working. The computer then restarts into it once, <strong>to keep it or go back</strong>. A version that does not start is never kept.</p>
+      </div>
+      <figure class="lead-media">
+        <div class="screen">
+          <video muted loop playsinline preload="none" poster="assets/video/update-poster.webp" data-src="assets/video/update.mp4" width="1920" height="1080" aria-label="The Update page offers a version from a stick; after confirming, the install runs (sped up), the computer restarts into the new version and it is kept."></video>
+        </div>
+        <figcaption><b>From the stick to the new version.</b> The install took about 13 minutes here; it is shown sped up.</figcaption>
+      </figure>
+
+      <div class="steps">
+        <div class="step">
+          <div class="screen zoom"><img src="assets/img/console-update-offer.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="The Update page: this computer runs v0.5.2 in slot A, slot B is empty, and a stick offers another version."></div>
+          <h4>A stick offers a version</h4>
+          <p>Plug in a stick that carries a release and the Update page offers it.</p>
+        </div>
+        <div class="step">
+          <div class="screen zoom"><img src="assets/img/console-update-confirm.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="The confirm sheet: the new version is written into the other slot and this computer's settings are carried over."></div>
+          <h4>Written beside the running one</h4>
+          <p>The other slot is written while the machine keeps working, and its settings are carried across.</p>
+        </div>
+        <div class="step">
+          <div class="screen zoom"><img src="assets/img/console-trial.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="The New version screen: you are trying the new version in slot B; keep it, or go back to the version in slot A."></div>
+          <h4>Tried once, then kept</h4>
+          <p>After the restart, keep the new version or go back. If nobody decides, the next restart goes back on its own.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        <div>
+          <span class="badge">When it does not start</span>
+          <h4>The old version is still there</h4>
+          <p>If a new version fails to come up, the firmware starts the previous one instead. The Update page says so plainly, and the version that failed stays in its slot until it is replaced.</p>
+        </div>
+        <figure>
+          <div class="screen zoom"><img src="assets/img/console-update-fallback.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="The Update page after a failed trial: slot A still runs v0.5.2, and slot B is marked 'did not boot last time'."></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- under the hood -->
+  <section id="how">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow" style="--c: var(--code)">Under the hood</span>
+        <h2>Few moving parts</h2>
+        <p>UjimaOS is Raspberry Pi OS underneath, with a small runtime of its own on every machine. There is no server to keep alive and nothing in the cloud.</p>
+      </div>
+      <div class="hood">
+        <div><b>Two slots on every disk</b><p>Boot, system and settings partitions for slot A and for slot B. People's files, the logs and the machine's identity are shared by both.</p></div>
+        <div><b>A clean system on every start</b><p>The system partition is mounted read-only with a throwaway layer on top, so what changes during a session is gone after a restart.</p></div>
+        <div><b>Signed, not centralised</b><p>Machines take commands only when they are signed with the room's key. The key lives on the machines and on the admin stick.</p></div>
+        <div><b>Found without setup</b><p>Each machine announces itself on the local network and the Console sweeps the subnet as well, so a room fills in without anyone typing an address.</p></div>
+      </div>
+      <div class="disk" role="img" aria-label="Disk layout: a control partition, slot A and slot B each with boot, system and settings partitions, then logs and storage shared by both slots.">
+        <svg viewBox="0 0 1100 190" aria-hidden="true">
+          <text x="259" y="22" fill="#88c0d0" font-size="13" font-weight="700" letter-spacing="1.5" text-anchor="middle">SLOT A · RUNNING</text>
+          <text x="619" y="22" fill="#7e9ed6" font-size="13" font-weight="700" letter-spacing="1.5" text-anchor="middle">SLOT B · NEXT VERSION</text>
+          <text x="956" y="22" fill="#b0b877" font-size="13" font-weight="700" letter-spacing="1.5" text-anchor="middle">SHARED</text>
+          <rect x="0" y="40" width="80" height="64" rx="10" fill="#1e242c" stroke="#343c48"/><text x="40" y="77" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Control</text>
+          <rect x="94" y="40" width="70" height="64" rx="10" fill="rgba(136,192,208,0.14)" stroke="rgba(136,192,208,0.55)"/><text x="129" y="77" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Boot</text>
+          <rect x="170" y="40" width="170" height="64" rx="10" fill="rgba(136,192,208,0.14)" stroke="rgba(136,192,208,0.55)"/><text x="255" y="77" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">System</text>
+          <rect x="346" y="40" width="78" height="64" rx="10" fill="rgba(136,192,208,0.14)" stroke="rgba(136,192,208,0.55)"/><text x="385" y="77" fill="#e7eaef" font-size="13" font-weight="600" text-anchor="middle">Settings</text>
+          <rect x="454" y="40" width="70" height="64" rx="10" fill="rgba(126,158,214,0.12)" stroke="rgba(126,158,214,0.45)"/><text x="489" y="77" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Boot</text>
+          <rect x="530" y="40" width="170" height="64" rx="10" fill="rgba(126,158,214,0.12)" stroke="rgba(126,158,214,0.45)"/><text x="615" y="77" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">System</text>
+          <rect x="706" y="40" width="78" height="64" rx="10" fill="rgba(126,158,214,0.12)" stroke="rgba(126,158,214,0.45)"/><text x="745" y="77" fill="#e7eaef" font-size="13" font-weight="600" text-anchor="middle">Settings</text>
+          <rect x="812" y="40" width="62" height="64" rx="10" fill="rgba(176,184,119,0.12)" stroke="rgba(176,184,119,0.45)"/><text x="843" y="77" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Logs</text>
+          <rect x="880" y="40" width="220" height="64" rx="10" fill="rgba(176,184,119,0.12)" stroke="rgba(176,184,119,0.45)"/><text x="990" y="77" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Storage</text>
+          <text x="40" y="132" fill="#9aa4b2" font-size="12.5" text-anchor="middle">which slot</text><text x="40" y="149" fill="#9aa4b2" font-size="12.5" text-anchor="middle">boots</text>
+          <text x="259" y="132" fill="#9aa4b2" font-size="12.5" text-anchor="middle">the version running now,</text><text x="259" y="149" fill="#9aa4b2" font-size="12.5" text-anchor="middle">read-only, with its own settings</text>
+          <text x="619" y="132" fill="#9aa4b2" font-size="12.5" text-anchor="middle">where the next version is</text><text x="619" y="149" fill="#9aa4b2" font-size="12.5" text-anchor="middle">written and tried once</text>
+          <text x="843" y="132" fill="#9aa4b2" font-size="12.5" text-anchor="middle">readable</text><text x="843" y="149" fill="#9aa4b2" font-size="12.5" text-anchor="middle">from both</text>
+          <text x="990" y="132" fill="#9aa4b2" font-size="12.5" text-anchor="middle">This Computer's files</text><text x="990" y="149" fill="#9aa4b2" font-size="12.5" text-anchor="middle">and extra apps</text>
+          <text x="1100" y="184" fill="#697180" font-size="11.5" text-anchor="end">not to scale</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- faq -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="head center">
+        <span class="eyebrow" style="--c: var(--office)">FAQ</span>
+        <h2>Questions people ask</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>What is UjimaOS?</summary>
+          <div class="a"><p>An operating system for shared computers. It turns a room of Raspberry Pi machines into one system that a single person can look after with a USB stick: the same desktop and apps on every machine, a Console to act on all of them at once, and updates with a way back.</p></div>
+        </details>
+        <details>
+          <summary>Is UjimaOS ready to use?</summary>
+          <div class="a"><p>UjimaOS is young and in active development, and it will not be considered stable until v1. Until then, expect rough edges and changes between releases. It already runs in two computer labs, but it is early software; the changelog says exactly what each release does.</p></div>
+        </details>
+        <details>
+          <summary>Does it need the internet?</summary>
+          <div class="a"><p>No. The apps, people's files, the Console and updates all work offline, and machines find each other on the local network. With internet access the Web app browses as usual.</p></div>
+        </details>
+        <details>
+          <summary>Is there a server or a cloud account?</summary>
+          <div class="a"><p>No. Every machine runs the same software. The Console runs on whichever machine holds the admin stick and talks to the others directly, so the room works the same whether one machine is on or twenty.</p></div>
+        </details>
+        <details>
+          <summary>What hardware does it run on?</summary>
+          <div class="a"><p>A Raspberry Pi 5 or Raspberry Pi 500, a microSD card of 32 GB or more, a screen, a keyboard and a mouse. The labs using it today run Pi 500s with 8 GB of memory and Pi 5s with 4 GB. A port to x86 computers is on the way.</p></div>
+        </details>
+        <details>
+          <summary>How do I get UjimaOS?</summary>
+          <div class="a">
+            <p>An installer is planned and not out yet. Until it is, UjimaOS is built from source: on a Linux computer with the repository, one command builds the system and writes a card that is ready to boot, <code>sudo bb build rpi disk /dev/&lt;card&gt; --wipe</code>.</p>
+            <p>After that, new versions arrive on a USB stick through the Console's Update page. See the <a href="https://github.com/vitalipe/ujima-os/blob/master/README.md">README</a> for what the build needs.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Who can manage the machines?</summary>
+          <div class="a"><p>Whoever holds the room's admin stick. Plugging it into any machine opens the Console; pulling it out closes it. Commands are signed with the room's key, and machines ignore anything that is not.</p></div>
+        </details>
+        <details>
+          <summary>What happens to people's files?</summary>
+          <div class="a"><p>There are three places, each named for what happens to it. <strong>Temporary</strong> is erased at shutdown. <strong>This Computer</strong> stays, and is shared by everyone who uses that machine. A <strong>USB stick</strong> goes home with its owner. The system itself is read-only and resets on restart, so a session can never break it.</p></div>
+        </details>
+        <details>
+          <summary>What if an update goes wrong?</summary>
+          <div class="a"><p>A new version is written into the slot that is not running and tried once. If it does not start, or someone chooses Go back, the computer returns to the version it ran before, with its settings intact. The Update page shows what happened.</p></div>
+        </details>
+        <details>
+          <summary>Which apps come with it, and can I add more?</summary>
+          <div class="a"><p>Web (Chromium), ONLYOFFICE, LibreOffice Writer, Calc and Impress, GIMP, Inkscape, Tux Paint, Excalidraw, Godot, TurboWarp, Thonny, Geany, Marble, Stellarium, XaoS and TuxTyping. An app is one folder in the catalog, and extra apps can live on a machine's own storage.</p></div>
+        </details>
+        <details>
+          <summary>Which keyboards and languages does it support?</summary>
+          <div class="a"><p>The interface is in English. Each machine can carry several keyboard layouts, English and Swahili for example, and switching between them is one click in the bar or a Super+Space away.</p></div>
+        </details>
+        <details>
+          <summary>Is it free?</summary>
+          <div class="a"><p>Yes. UjimaOS is open source under the Mozilla Public License 2.0.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap">
+      <div class="head center">
+        <img class="bigmark" src="assets/img/logo-mark.svg" alt="" width="104" height="113">
+        <h2>Bring a room of computers back to life</h2>
+        <p>Read the code, build a card, or follow the field work behind it.</p>
+      </div>
+      <div class="ctas">
+        <a class="btn primary" href="https://github.com/vitalipe/ujima-os">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          UjimaOS on GitHub
+        </a>
+        <a class="btn quiet" href="https://github.com/vitalipe/ujima-os-knowledge-base">The knowledge base</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>UjimaOS · current release v0.5.2 · MPL-2.0</span>
+    <nav aria-label="Links">
+      <a href="https://github.com/vitalipe/ujima-os">Code</a>
+      <a href="https://github.com/vitalipe/ujima-os/blob/master/CHANGELOG.md">Changelog</a>
+      <a href="https://github.com/vitalipe/ujima-os-knowledge-base">Knowledge base</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
