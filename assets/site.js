@@ -34,7 +34,7 @@
     let raf = 0;
     const name = (v.dataset.src.match(/video\/([a-z]+)\.mp4/) || [])[1];
     const steps = document.querySelector(`.howto[data-for="${name}"]`);
-    const cards = steps ? [...steps.querySelectorAll('.howstep')].map(c => [c, +c.dataset.from, +c.dataset.to]) : [];
+    const cards = steps ? [...steps.querySelectorAll('.howstep')].map(c => [c, +c.dataset.from, +c.dataset.to, +(c.dataset.seek || c.dataset.from)]) : [];
     const paint = () => {
       const t = v.currentTime;
       for (const [g, a, b] of notes) g.classList.toggle('on', t >= a && t < b);
@@ -43,7 +43,7 @@
       if (steps) steps.classList.toggle('live', lit);
     };
     const loop = () => { paint(); raf = v.paused ? 0 : requestAnimationFrame(loop); };
-    for (const [c, from] of cards) {
+    for (const [c, , , from] of cards) {
       const go = () => {
         load();
         held = false;
