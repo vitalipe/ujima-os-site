@@ -25,7 +25,7 @@
     </a>
     <nav aria-label="Sections">
       <a href="#desktop">Desktop</a>
-      <a href="#console">Console</a>
+      <a href="#manage">Manage</a>
       <a href="#updates">Updates</a>
       <a href="#faq">FAQ</a>
       <a class="gh" href="https://github.com/vitalipe/ujima-os">
@@ -176,23 +176,6 @@
         </figure>
       </div>
 
-      <div class="feature">
-        <div class="copy">
-          <h3>Locks and focus, from the admin's seat</h3>
-          <p>From the Console, an admin can lock every screen for a break, or hold the room on one app. In focus mode the bars disappear and switching apps is off until the machine is released.</p>
-        </div>
-        <div class="pair">
-          <figure>
-            <div class="screen zoom" data-full="assets/img/shell-lock.webp"><img src="assets/img/shell-lock-1200.webp" width="1200" height="675" loading="lazy" decoding="async" alt="A locked UjimaOS screen showing a padlock, the time and the date."></div>
-            <figcaption><b>Locked</b> over the wallpaper.</figcaption>
-          </figure>
-          <figure>
-            <div class="screen zoom"><img src="assets/img/shell-focus.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="Excalidraw filling the whole screen with no bars: focus mode."></div>
-            <figcaption><b>Focus:</b> one app, no bars.</figcaption>
-          </figure>
-        </div>
-      </div>
-
       <div class="head center" style="margin-top: clamp(56px, 8vw, 96px)">
         <h3 style="font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.5px">The apps are already there</h3>
         <p>Office, drawing, programming, maps and the night sky, installed on every machine. Apart from the Web app, none of them needs the internet. Adding an app is adding one folder.</p>
@@ -223,23 +206,35 @@
     </div>
   </section>
 
-  <!-- the console -->
-  <section id="console">
+  <!-- manage -->
+  <section id="manage">
     <div class="wrap">
       <div class="head">
-        <span class="eyebrow" style="--c: var(--frost-rgb)">The Console</span>
-        <h2>Run the whole room from one USB stick</h2>
-        <p>Plug the admin stick into any machine and the Console opens. Pull it out and the Console closes. It reaches every machine that shares the room's key, directly over the local network.</p>
+        <span class="eyebrow" style="--c: var(--frost-rgb)">Manage</span>
+        <h2>One USB stick turns a room of computers into one system</h2>
+        <p>Day to day, every machine works on its own, with no admin screens and nothing to log into. Plug the room's admin stick into any one of them and that machine opens the <strong>Console</strong>, a control panel that reaches every machine sharing the room's key. Pull the stick out and it is an ordinary computer again. There is no server and no password: the stick is the key.</p>
+      </div>
+      <div class="howto">
+        <figure class="howstep" style="--n: 1"><svg viewBox="0 0 320 190" role="img" aria-label="Five machines, and the admin stick going into the middle one"><rect x="6" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="27" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="19" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><rect x="70" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="91" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="83" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><rect x="134" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="155" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="147" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><rect x="198" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="219" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="211" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><rect x="262" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="283" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="275" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><rect x="152" y="156" width="16" height="30" rx="4" fill="#ebcb8b"/><rect x="155" y="148" width="10" height="9" rx="1.5" fill="none" stroke="#ebcb8b" stroke-width="2"/><path d="M168 150 v-22 m-6 6 l6-6 6 6" fill="none" stroke="#ebcb8b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><figcaption><b>Plug in the admin stick</b>Into any machine in the room. Until then, every machine just works on its own.</figcaption></figure>
+        <figure class="howstep" style="--n: 2"><svg viewBox="0 0 320 190" role="img" aria-label="The machine with the stick reaches every other machine"><path d="M160 66 Q96 18 32 66" fill="none" stroke="#88c0d0" stroke-width="1.8" stroke-dasharray="4 5" stroke-linecap="round"/><path d="M160 66 Q128 34 96 66" fill="none" stroke="#88c0d0" stroke-width="1.8" stroke-dasharray="4 5" stroke-linecap="round"/><path d="M160 66 Q192 34 224 66" fill="none" stroke="#88c0d0" stroke-width="1.8" stroke-dasharray="4 5" stroke-linecap="round"/><path d="M160 66 Q224 18 288 66" fill="none" stroke="#88c0d0" stroke-width="1.8" stroke-dasharray="4 5" stroke-linecap="round"/><rect x="6" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="27" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="19" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><path d="M25 88l5 5 9-10" fill="none" stroke="#9cc58f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="70" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="91" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="83" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><path d="M89 88l5 5 9-10" fill="none" stroke="#9cc58f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="134" y="70" width="52" height="36" rx="7" fill="rgba(136,192,208,0.16)" stroke="#88c0d0" stroke-width="2"/><rect x="155" y="108" width="10" height="7" rx="1.5" fill="#88c0d0"/><rect x="147" y="115" width="26" height="3" rx="1.5" fill="#88c0d0"/><g fill="none" stroke="#88c0d0" stroke-width="1.8" stroke-linecap="round"><circle cx="160" cy="88" r="1.6" fill="#88c0d0"/><path d="M165 83a7 7 0 0 1 0 10M155 93a7 7 0 0 1 0-10"/><path d="M169 79a12.5 12.5 0 0 1 0 18M151 97a12.5 12.5 0 0 1 0-18"/></g><rect x="198" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="219" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="211" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><path d="M217 88l5 5 9-10" fill="none" stroke="#9cc58f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="262" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="283" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="275" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><path d="M281 88l5 5 9-10" fill="none" stroke="#9cc58f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="152" y="124" width="16" height="30" rx="4" fill="#ebcb8b"/><rect x="155" y="116" width="10" height="9" rx="1.5" fill="none" stroke="#ebcb8b" stroke-width="2"/></svg><figcaption><b>That machine opens the Console</b>It reaches every machine that shares the room's key, and they answer it.</figcaption></figure>
+        <figure class="howstep" style="--n: 3"><svg viewBox="0 0 320 190" role="img" aria-label="The stick is taken out and every machine is ordinary again"><rect x="6" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="27" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="19" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><rect x="70" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="91" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="83" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><rect x="134" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="155" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="147" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><rect x="198" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="219" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="211" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><rect x="262" y="70" width="52" height="36" rx="7" fill="#1b2027" stroke="#3a4250" stroke-width="2"/><rect x="283" y="108" width="10" height="7" rx="1.5" fill="#3a4250"/><rect x="275" y="115" width="26" height="3" rx="1.5" fill="#3a4250"/><rect x="152" y="160" width="16" height="30" rx="4" fill="#ebcb8b"/><rect x="155" y="152" width="10" height="9" rx="1.5" fill="none" stroke="#ebcb8b" stroke-width="2"/><path d="M168 128 v22 m-6-6 l6 6 6-6" fill="none" stroke="#9aa4b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><figcaption><b>Take the stick out</b>The Console closes, and it is an ordinary computer again.</figcaption></figure>
+      </div>
+      <figure class="lead-media">
+        <div class="screen">
+          <video muted loop playsinline preload="none" poster="assets/video/manage-poster.webp" data-src="assets/video/manage.mp4" width="1920" height="1080" aria-label="An ordinary UjimaOS desktop; the admin stick is plugged in and the Console opens on its own; Circle shows the eight other machines in the room; the stick is taken out and the Console closes."></video>
+        </div>
+        <figcaption><b>Plug in the admin stick,</b> see the whole room, take the stick out again.</figcaption>
+      </figure>
+
+      <div class="head" style="margin-top: clamp(56px, 8vw, 96px)">
+        <h3 style="font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.5px">What the Console can do</h3>
+        <p>Three panels, each for one kind of job.</p>
       </div>
       <div class="panes">
         <div class="pane"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1.6"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4"/><path d="M7.8 16.2a6 6 0 0 1 0-8.4"/><path d="M19.1 4.9a10 10 0 0 1 0 14.2"/><path d="M4.9 19.1a10 10 0 0 1 0-14.2"/></svg><div><b>Circle</b><span>Guide every screen: apps, sound, locks, power.</span></div></div>
         <div class="pane"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34 1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87 1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg><div><b>Setup</b><span>Names, clock, keyboard layouts and checks, per machine or for all.</span></div></div>
         <div class="pane"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><div><b>Update</b><span>A newer UjimaOS from a stick, or back to the previous one.</span></div></div>
       </div>
-      <figure class="lead-media">
-        <div class="screen zoom"><img src="assets/img/console-home.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="The Console's home screen with three tiles: Circle, Setup and Update."></div>
-        <figcaption><b>The Console</b> opens on its own when the admin stick goes in.</figcaption>
-      </figure>
 
       <div class="feature">
         <div class="copy">
@@ -261,6 +256,23 @@
       </div>
 
       <div class="feature flip">
+        <div class="copy">
+          <h3>Locks and focus, from the admin's seat</h3>
+          <p>From the Console, an admin can lock every screen for a break, or hold the room on one app. In focus mode the bars disappear and switching apps is off until the machine is released.</p>
+        </div>
+        <div class="pair">
+          <figure>
+            <div class="screen zoom" data-full="assets/img/shell-lock.webp"><img src="assets/img/shell-lock-1200.webp" width="1200" height="675" loading="lazy" decoding="async" alt="A locked UjimaOS screen showing a padlock, the time and the date."></div>
+            <figcaption><b>Locked</b> over the wallpaper.</figcaption>
+          </figure>
+          <figure>
+            <div class="screen zoom"><img src="assets/img/shell-focus.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="Excalidraw filling the whole screen with no bars: focus mode."></div>
+            <figcaption><b>Focus:</b> one app, no bars.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="feature">
         <div class="copy">
           <h3>Setup: one machine, or every machine</h3>
           <p>Give a machine its name, set the clock and time zone, choose keyboard layouts and where sound goes. The clock and the keyboard layouts go to the whole room in one click, so after a power cut every clock is put right at once.</p>
