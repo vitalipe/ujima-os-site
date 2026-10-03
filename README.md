@@ -18,4 +18,5 @@ Before it goes public:
 - the New version screen in the Updates section is staged: the real page, fed a trial state,
   because the capture board never starts a trial boot (an open UjimaOS bug).
 
-Public Sans is under the SIL Open Font License (`assets/fonts/LICENSE.md`).
+Public Sans and Excalifont are under the SIL Open Font License (`assets/fonts/LICENSE.md`,
+`assets/fonts/Excalifont-OFL.txt`). The notes over the clips are drawn by the page, timed to each video.

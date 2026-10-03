@@ -29,6 +29,16 @@
     v.addEventListener('pause', sync);
     sync();
 
+    const notes = [...frame.querySelectorAll('.note')].map(g => [g, +g.dataset.t0, +g.dataset.t1]);
+    let raf = 0;
+    const paint = () => { const t = v.currentTime; for (const [g, a, b] of notes) g.classList.toggle('on', t >= a && t < b); };
+    const loop = () => { paint(); raf = v.paused ? 0 : requestAnimationFrame(loop); };
+    if (notes.length) {
+      v.addEventListener('play', () => { if (!raf) raf = requestAnimationFrame(loop); });
+      v.addEventListener('seeked', paint);
+      v.addEventListener('pause', paint);
+    }
+
     btn.addEventListener('click', () => {
       load();
       if (v.paused) { held = false; v.play(); } else { held = true; v.pause(); }
