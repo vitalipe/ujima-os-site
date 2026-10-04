@@ -12,9 +12,6 @@ step, no external requests.
 Preview with `python3 -m http.server 8731` here, then open http://127.0.0.1:8731/.
 Publish with GitHub Pages from the repository root.
 
-The New version screen in the Updates section is staged: the real page, fed a trial state,
-because the capture board never starts a trial boot (an open UjimaOS bug).
-
 The field photos and the Circle clip come from the
 [UjimaOS knowledge base](https://github.com/vitalipe/ujima-os-knowledge-base) and are all rights reserved.
 
