@@ -12,8 +12,8 @@
 <meta property="og:image" content="https://vitalipe.github.io/ujima-os-site/assets/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/logo-icon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/PublicSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=24">
+<link rel="preload" href="assets/fonts/PublicSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css?v=25">
 </head>
 <body>
 
@@ -390,7 +390,7 @@
         <div><b>A shell that speaks HTTP</b><p>The bar, the home screen and Files show what the runtime streams over a local HTTP API, and send every click back the same way. The Console and other machines use the signed side of that API.</p></div>
       </div>
       <div class="disk" role="img" aria-label="Disk layout: a control partition, slot A and slot B each with boot, system and settings partitions, then logs and storage shared by both slots.">
-        <svg viewBox="0 0 1100 190" aria-hidden="true">
+        <svg class="wide" viewBox="0 0 1100 190" aria-hidden="true">
           <text x="259" y="22" fill="#88c0d0" font-size="13" font-weight="700" letter-spacing="1.5" text-anchor="middle">SLOT A · RUNNING</text>
           <text x="619" y="22" fill="#7e9ed6" font-size="13" font-weight="700" letter-spacing="1.5" text-anchor="middle">SLOT B · NEXT VERSION</text>
           <text x="956" y="22" fill="#b0b877" font-size="13" font-weight="700" letter-spacing="1.5" text-anchor="middle">SHARED</text>
@@ -408,7 +408,27 @@
           <text x="619" y="132" fill="#9aa4b2" font-size="12.5" text-anchor="middle">where the next version is</text><text x="619" y="149" fill="#9aa4b2" font-size="12.5" text-anchor="middle">written and tried once</text>
           <text x="843" y="132" fill="#9aa4b2" font-size="12.5" text-anchor="middle">readable</text><text x="843" y="149" fill="#9aa4b2" font-size="12.5" text-anchor="middle">from both</text>
           <text x="990" y="132" fill="#9aa4b2" font-size="12.5" text-anchor="middle">This Computer's files</text><text x="990" y="149" fill="#9aa4b2" font-size="12.5" text-anchor="middle">and extra apps</text>
-          <text x="1100" y="184" fill="#697180" font-size="11.5" text-anchor="end">not to scale</text>
+          <text x="1100" y="184" fill="#808898" font-size="11.5" text-anchor="end">not to scale</text>
+        </svg>
+        <svg class="tall" viewBox="-1 -1 302 498" aria-hidden="true">
+          <rect x="0" y="0" width="84" height="48" rx="10" fill="#1e242c" stroke="#343c48"/><text x="42" y="29" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Control</text>
+          <text x="100" y="20" fill="#9aa4b2" font-size="13">which slot</text><text x="100" y="37" fill="#9aa4b2" font-size="13">boots</text>
+          <text x="0" y="84" fill="#88c0d0" font-size="12.5" font-weight="700" letter-spacing="1.4">SLOT A · RUNNING</text>
+          <rect x="0" y="96" width="64" height="48" rx="10" fill="rgba(136,192,208,0.14)" stroke="rgba(136,192,208,0.55)"/><text x="32" y="125" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Boot</text>
+          <rect x="70" y="96" width="136" height="48" rx="10" fill="rgba(136,192,208,0.14)" stroke="rgba(136,192,208,0.55)"/><text x="138" y="125" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">System</text>
+          <rect x="212" y="96" width="88" height="48" rx="10" fill="rgba(136,192,208,0.14)" stroke="rgba(136,192,208,0.55)"/><text x="256" y="125" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Settings</text>
+          <text x="150" y="168" fill="#9aa4b2" font-size="13" text-anchor="middle">the version running now,</text><text x="150" y="185" fill="#9aa4b2" font-size="13" text-anchor="middle">read-only, with its own settings</text>
+          <text x="0" y="222" fill="#7e9ed6" font-size="12.5" font-weight="700" letter-spacing="1.4">SLOT B · NEXT VERSION</text>
+          <rect x="0" y="234" width="64" height="48" rx="10" fill="rgba(126,158,214,0.12)" stroke="rgba(126,158,214,0.45)"/><text x="32" y="263" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Boot</text>
+          <rect x="70" y="234" width="136" height="48" rx="10" fill="rgba(126,158,214,0.12)" stroke="rgba(126,158,214,0.45)"/><text x="138" y="263" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">System</text>
+          <rect x="212" y="234" width="88" height="48" rx="10" fill="rgba(126,158,214,0.12)" stroke="rgba(126,158,214,0.45)"/><text x="256" y="263" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Settings</text>
+          <text x="150" y="306" fill="#9aa4b2" font-size="13" text-anchor="middle">where the next version is</text><text x="150" y="323" fill="#9aa4b2" font-size="13" text-anchor="middle">written and tried once</text>
+          <text x="0" y="360" fill="#b0b877" font-size="12.5" font-weight="700" letter-spacing="1.4">SHARED</text>
+          <rect x="0" y="372" width="64" height="48" rx="10" fill="rgba(176,184,119,0.12)" stroke="rgba(176,184,119,0.45)"/><text x="32" y="401" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Logs</text>
+          <rect x="70" y="372" width="230" height="48" rx="10" fill="rgba(176,184,119,0.12)" stroke="rgba(176,184,119,0.45)"/><text x="185" y="401" fill="#e7eaef" font-size="14" font-weight="600" text-anchor="middle">Storage</text>
+          <text x="32" y="444" fill="#9aa4b2" font-size="13" text-anchor="middle">readable</text><text x="32" y="461" fill="#9aa4b2" font-size="13" text-anchor="middle">from both</text>
+          <text x="185" y="444" fill="#9aa4b2" font-size="13" text-anchor="middle">This Computer's files</text><text x="185" y="461" fill="#9aa4b2" font-size="13" text-anchor="middle">and extra apps</text>
+          <text x="300" y="492" fill="#808898" font-size="11.5" text-anchor="end">not to scale</text>
         </svg>
       </div>
     </div>
@@ -531,6 +551,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js?v=15" defer></script>
+<script src="assets/site.js?v=16" defer></script>
 </body>
 </html>
