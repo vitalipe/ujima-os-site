@@ -227,8 +227,8 @@ section { padding: clamp(72px, 10vw, 128px) 0 0; }
 .disk svg text { font-family: "Public Sans", system-ui, sans-serif; }
 
 /* under the hood: the top-level drawing */
-.arch { display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px; margin-top: 44px; }
-@media (max-width: 900px) { .arch { grid-template-columns: 1fr; } }
+.arch { margin-top: 44px; }
+.arch-core > * { max-width: 860px; margin-left: auto; margin-right: auto; }
 .arch > * { padding: 22px 22px 24px; border-radius: 20px; background: var(--panel); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05); }
 .arch h4 { font-size: 13px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: rgb(var(--code)); margin-bottom: 16px; }
 .tops { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -254,21 +254,6 @@ section { padding: clamp(72px, 10vw, 128px) 0 0; }
 .plane span { display: block; margin-top: 3px; color: var(--dim); font-size: 12.5px; line-height: 1.4; }
 .arch-core figcaption { margin-top: 16px; color: var(--dim); font-size: 15px; text-align: left; }
 @media (max-width: 640px) { .planes { grid-template-columns: 1fr; } }
-.arch-machine { display: flex; flex-direction: column; gap: 10px; }
-.arch-machine h4 { margin-bottom: 6px; }
-.layer { padding: 14px 16px; border-radius: 12px; background: rgba(var(--c), 0.08); box-shadow: inset 0 0 0 1px rgba(var(--c), 0.32); }
-.layer b { display: block; font-size: 16px; }
-.layer span { display: block; margin-top: 2px; color: var(--dim); font-size: 14px; }
-.l-apps { --c: var(--explore); }
-.l-run { --c: var(--frost-rgb); }
-.l-os { --c: 154, 164, 178; }
-.l-disk { --c: var(--code); }
-.slots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
-.slot { padding: 9px 10px; border-radius: 9px; font-weight: 700; font-size: 14px; color: var(--text); background: rgba(var(--s), 0.12); box-shadow: inset 0 0 0 1px rgba(var(--s), 0.45); }
-.slot i { display: block; font-style: normal; font-weight: 400; font-size: 12.5px; color: var(--dim); }
-.slot.a { --s: var(--frost-rgb); }
-.slot.b { --s: var(--explore); }
-.slot.f { --s: var(--code); }
 
 /* faq */
 .faq { max-width: 860px; margin: 40px auto 0; display: grid; gap: 10px; }
